@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Happy Mensiversary</title>
+   <link rel="stylesheet" href="Style.css">                         
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#ini-kita">Ini Kita</a>
+        <a href="#harapan">Harapan</a>
+    </div>
+
+    <div id="home" class="content">
+        <h1>๑⋅⋯ ୨Happy Mensiversary୧ ⋯⋅๑</h1>
+        <div class="heart-icon">ﮩ٨ـﮩﮩ٨ـ♡ﮩ٨ـﮩﮩ٨ـ️</div>
+        <p>Aku mau ngamen dulu, plisss jangan ketawa!</p>
+        
+        <div class="audio-player">
+            <audio id="love-song" controls>
+                <source src="Menyimpan rasa.mp3" type="audio/mpeg">
+            </audio>
+                       <p> Tolongin yaaa kalo belum jodoh, dijodohin. Mwuhehe. Ini lagu relate banget kan? Tolong jangan fokus ke suara yang fals itu, kita fokus ke setiap liriknya. Nyanyiin lagu ini, sama dengan membawa aku ke awal-awal aku menyadari perasaan aku, sempet rasanya pengen banget-banget bilang "Tolong liat aku loh!". Liat dalam artian sebagai lawan jenis, mwuhehe. Tapi, aku masih sangat banyak mengucapkan syukur karena pada akhirnya mas sama aku. Terimakasih banyak ๑> ༝ <๑</p>
+        </div>
+    </div>
+
+    <div id="home" class="content">
+        <div class="audio-player">
+            <audio id="love-song" controls>
+                <source src="Ku cinta kau.mp3" type="audio/mpeg">
+            </audio>
+                       <p>Hati aku itu kecil bangeeeeeet, jadi cuma bisa nampung user "Khitaro Auriga" ! 🐾</p>
+        </div>
+    </div>
+
+    <div id="home" class="content">
+        <div class="audio-player">
+            <audio id="love-song" controls>
+                <source src="Aku mau.mp3" type="audio/mpeg">
+            </audio>
+                       <p>Maaf aku banyak insecure sama overthingking, aku cuma punya bekel ngaku-ngaku aja(≚ᄌ≚)</p>
+        </div>
+    </div>
+
+    <div id="home" class="content">
+        <div class="audio-player">
+            <audio id="love-song" controls>
+                <source src="Aku tak punya bunga.mp3" type="audio/mpeg">
+            </audio>
+                       <p>Aku bener-bener ga punya apa-apa, bahkan mungkin banyaknya aku nyusahin mas. Tapi, meskipun aku sadar itu aku tetep bakal nyusahin mas. Semoga mas engga bosen sama cape yaaa! Semangat sayang ku↺</p>
+        </div>
+    </div>
+
+    <div id="home" class="content">
+        <div class="audio-player">
+            <audio id="love-song" controls>
+                <source src="Anugrah terindah.mp3" type="audio/mpeg">
+            </audio>
+                       <p>Mas tau lagu ini? Yupsss ini "Anugrah Terindah" versi bapak-bapak jodoel! Tapi, ini masih relevan buat kita ₍ᐢ..ᐢ₎</p>
+        </div>
+    </div>
+
+    <div id="ini-kita" class="content" style="display:none;">
+        <h2>Memori Book</h2>
+        <div id="gallery">
+            <img src="1.jpg" alt="Foto Kenangan 1">
+            <img src="2.jpg" alt="Foto Kenangan 2">
+        </div>
+    </div>
+
+    <div id="harapan" class="content" style="display:none;">
+        <h2>Harapan Aku+ ˚ ꒱ 🕯</h2>
+        <ul class="harapan-list">
+            <li>Semoga mas selalu sehat</li>
+            <li>Tambah sayang aku</li>
+            <li>Tambah-tambah terus tiap hari</li>
+            <li>Jangan lupain buat sarapan</li>
+            <li>Selalu bareng aku yaaaaaa</li>
+        </ul>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                
+                ['home', 'ini-kita', 'harapan'].forEach(id => {
+                    document.getElementById(id).style.display = 'none';
+                });
+
+                document.getElementById(targetId).style.display = 'block';
+            });
+        });
+
+        window.addEventListener('load', function() {
+            const audio = document.getElementById('love-song');
+            audio.play().catch(error => {
+                console.log('Autoplay terblokir:', error);
+            });
+        });
+    </script>
+
+    <div class="navbar">
+                            <div class="hero-content">
+                                <p>Qianametha × Auriga</p> 
+                         	</div>
+        </div>   
+ </footer>
+</body>
+</html>
